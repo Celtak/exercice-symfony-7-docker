@@ -15,17 +15,18 @@ services:
   mysql:
     image: mysql:8.2
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      # 🚨 Changer si vous utilisez cette configuration en production
+      MYSQL_ROOT_PASSWORD: root # ⬅︎ 🚨
       MYSQL_DATABASE: appdb
-      MYSQL_USER: user
-      MYSQK_PASSWORD: password
+      MYSQL_USER: user # ⬅︎ 🚨
+      MYSQK_PASSWORD: password # ⬅︎ 🚨
     volumes:
       - data:/var/lib/mysql
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
       PMA_HOST: mysql
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root # ⬅︎ 🚨
     ports:
       - "8081:80"
 
